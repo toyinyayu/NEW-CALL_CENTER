@@ -25,3 +25,14 @@ FROM call_center.dbo.call_center
 WHERE csat_score IS NOT NULL;
 
 ```
+
+### Average Call Duration in Mins
+
+``` SQL
+SELECT 
+    ROUND(AVG(call_duration * 1.0), 2 )
+	AS Call_Duration_In_Min
+FROM call_center.dbo.call_center
+WHERE call_duration IS NOT NULL;
+
+```
